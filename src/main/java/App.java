@@ -15,6 +15,13 @@ public class App {
         System.out.println(new App().getGreeting());
         
         WebDriver driver = new ChromeDriver();
+        
+
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--window-size=1920,1080");
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
 
